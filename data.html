@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_tugas.css">
+    <script src="fontawesome/js/all.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+            <div class="top">
+                Muamar Farhan -F2120032
+            </div>
+            <ul>
+                <li class="active"><a href="register.html"><i class="fa fa-edit"></i>Register</a></li>
+                <li><a href="index.html"><i class="fa fa-user"></i>Login</a></li>
+                <li><a href="beli.html"><i class="fa fa-shopping-basket"></i>Beli</a></li>
+                <li><a href="data.html"><i class="fa fa-shopping-basket"></i>Data</a></li>
+
+            </ul>
+        </div>
+        <section>
+            <div class="wrapper">
+                <div class="titleP">
+                <h2>Data kartu paket internet</h2>
+                </div>
+                <br>
+               <div class="field">
+                <table id="keywords" cellspacing="0" cellpadding="0">
+                    <thead>
+                      <tr>
+                        <th><span>No</span></th>
+                        <th><span>Operator / Kartu</span></th>
+                        <th><span>Data</span></th>
+                        <th><span>Masa aktif</span></th>
+                        <th><span>Aksi</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Telkomsel / Simpati</td>
+                        <td>10 GB</td>
+                        <td>1 Bulan</td>
+                        <td><button class="danger" onclick="showAlert()">Hapus</button><br><button onclick="Alert()" class="update">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>XL / XLaxiata</td>
+                        <td>20 GB</td>
+                        <td>1 Bulan</td>
+                        <td><button class="danger" onclick="showAlert()">Hapus</button><br><button onclick="Alert()" class="update">Edit</button></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+               </div>
+                       <script>
+                        function showAlert()
+                        {
+                            swal({
+                            title: "Apakah anda ingin menghapus data?",
+                            text: "Data yang di hapus tidak akan kembali!",
+                            icon: "warning",
+                            buttons: true,
+                            dangerMode: true,
+                            })
+                            .then((willDelete) => {
+                            if (willDelete) {
+                                swal("Data berhasil dihapus!", {
+                                icon: "success",
+                                });
+                            } else {
+                                swal("Data tidak dihapus!");
+                            }
+                            });
+                        }
+                        function Alert()
+                        {
+                            swal(
+                        
+                            "Apakah anda ingin mengedit data?",
+                            {
+                            icon: "warning",
+                            buttons: {
+                                cancel: "Tidak",
+                                catch: {
+                                text: "Berhasil",
+                                },
+                                gagal: {
+                                text: "Gagal",
+                                dangerMode : true,
+                                },
+                                
+                            },
+                            })
+                            .then((value) => {
+                            switch (value) {
+                            
+                                case "gagal":
+                                swal("Gagal!", "Data gagal diedit", "error");
+                                break;
+                            
+                                case "catch":
+                                swal("Berhasil!", "Data berhasil diedit!", "success");
+                                break;
+                            
+                                default:
+                                swal("Data tidak diedit!");
+                            }
+                            });
+                        }
+                        </script>
+
+                   
+
+                
+               
+                
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

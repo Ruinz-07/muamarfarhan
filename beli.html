@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_tugas.css">
+    <script src="fontawesome/js/all.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+            <div class="top">
+                Muamar Farhan -F2120032
+            </div>
+            <ul>
+                <li class="active"><a href="register.html"><i class="fa fa-edit"></i>Register</a></li>
+                <li><a href="index.html"><i class="fa fa-user"></i>Login</a></li>
+                <li><a href="beli.html"><i class="fa fa-shopping-basket"></i>Beli</a></li>
+                <li><a href="data.html"><i class="fa fa-shopping-basket"></i>Data</a></li>
+                
+            </ul>
+        </div>
+        <section>
+            <div class="wrapper">
+                <div class="titleP">
+                <h2>Jual Voucher Pulsa</h2>
+                </div>
+                <form action="">
+                    <div class="field">
+                        <input type="username" name="username" required="required" value="User yang sedang login">
+                        <label>Username</label>
+                    </div>
+                    <div class="field">
+                        <select>
+                            <option selected="selected">-- Pilih Operator --</option>
+                            <option value="XL">XL</option>
+                            <option value="Telkomsel">TELKOMSEL</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <select>
+                            <option selected="selected">-- Pulsa --</option>
+                            <option value="5000">5000</option>
+                            <option value="10000">10000</option>
+                            <option value="20000">20000</option>
+                            <option value="30000">30000</option>
+                            <option value="50000">50000</option>
+                            <option value="100000">100000</option>
+                        </select>
+                    </div>
+                    
+                </form>
+                <div class="field">
+                    <button onclick="beli()">Beli</button>
+                </div>
+                <script>
+                    function beli(){
+                        swal("Berhasil!", "Anda berhasil membeli pulsa!", "success");
+                    }
+                </script>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
